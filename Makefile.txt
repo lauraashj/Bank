@@ -1,0 +1,15 @@
+bank.o: bank.c bank.h
+	
+	gcc -g -Wall -c bank.c 
+
+
+test_bank.o: test_bank.c bank.h
+	
+	gcc -g -Wall -c test_bank.c
+ 
+
+test_bank: bank.o test_bank.o
+	
+	gcc -o test_bank bank.o test_bank.o
+
+# should be named Makefile
